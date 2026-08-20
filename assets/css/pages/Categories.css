@@ -1,0 +1,86 @@
+/* Categories */
+    /* Page 1 */
+    .Page-1 {
+        background-color: #f9fafb ;
+    }
+    .page-header-container {
+        margin-inline: auto;
+        max-width: 80rem;
+        padding-inline: 2rem;
+    }
+    .breadcrumb .breadcrumb-item a {
+        color :#202123 ;
+    }
+    .breadcrumb .breadcrumb-item a:hover {
+        color :#d56428 ;
+    
+    }
+    /* Page 2 */
+    .container {
+        display : flex ;
+        text-align :left ;
+    }
+    .card {
+        overflow: hidden !important;
+        border: none !important;
+        border-radius: 20px;
+    }
+
+    .card img {
+        transition: transform 0.5s ease-in-out !important;
+    }
+
+    .card:hover img {
+        transform: scale(1.08) !important;
+    }
+    /* Page 3 */
+    .Page-3 {
+        background-color: var(--bg-secondary);
+        display: flex;
+        align-items: center;
+        padding: 50px;
+        justify-content :space-around ;
+        width: 100%;
+    }
+    .Shop-All {
+        padding : 10px ;
+        background-color: var(--color-primary-600);
+        border: 2px solid var(--color-primary-600);
+        border-radius: 12px;
+        color :#ffff ;
+        align-self: flex-end;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    .View-Sale-Items {
+        padding : 10px;
+        border :2px solid #d1d5dc ;
+        border-radius: 12px;
+        background-color: #ffff;
+        color :#272e3d ;
+        align-self: flex-end;
+        cursor: pointer;
+    }
+    .button-group {
+        display: flex;
+        gap: 20px;
+    }
+    .View-Sale-Items :hover {
+        background-color: #bc4809;
+    }
+    .Shop-All:hover {
+        background-color: #bc4809;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+    

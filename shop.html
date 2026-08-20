@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stride | Shop</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/pages/shop.css"> 
+</head>
+
+<body>
+<site-header></site-header>
+
+<main class="container shop-page">
+
+
+    <div class="row g-5">
+        <aside class="col-lg-3">
+            <div id="categories">
+                <div class="sidebar-title">
+                    Categories
+                </div>
+
+                <div id="categoryList"></div>
+            </div>
+
+            <div class="sidebar-title mt-5">
+                Quick Filters
+            </div>
+
+            <div class="d-flex gap-2 flex-wrap">
+
+                <button
+                    class="quick-filter"
+                    id="newFilter"
+                >
+                    New Arrivals
+                </button>
+
+                <button
+                    class="quick-filter"
+                    id="saleFilter"
+                >
+                    On Sale
+                </button>
+
+            </div>
+
+            <div class="sidebar-title mt-5">
+                Price Range
+            </div>
+
+
+            <div class="row g-2">
+
+
+                <div class="col-6">
+
+                    <input
+                        type="number"
+                        id="minPrice"
+                        class="form-control price-input"
+                        placeholder="Min"
+                    >
+
+                </div>
+
+
+                <div class="col-6">
+
+                    <input
+                        type="number"
+                        id="maxPrice"
+                        class="form-control price-input"
+                        placeholder="Max"
+                    >
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <section class="col-lg-9">
+
+            <div
+                class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4"
+            >
+
+
+                <div class="showing">
+
+                    Showing
+
+                    <span id="productCount">
+                        0
+                    </span>
+
+                    products
+
+                </div>
+
+                <div class="d-flex gap-2">
+
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        class="search-input"
+                        placeholder="Search shoes..."
+                    >
+
+
+                    <select
+                        id="sortSelect"
+                        class="sort-select"
+                    >
+
+                        <option value="featured">
+                            Featured
+                        </option>
+
+
+                        <option value="priceLow">
+                            Price: Low to High
+                        </option>
+
+
+                        <option value="priceHigh">
+                            Price: High to Low
+                        </option>
+
+
+                        <option value="rating">
+                            Top Rated
+                        </option>
+
+
+                    </select>
+
+
+                </div>
+
+
+            </div>
+
+            <div
+                class="row g-4"
+                id="productGrid"
+            >
+            </div>
+
+
+            <div
+                id="empty"
+                class="empty d-none"
+            >
+
+                <h3>
+                    No shoes found
+                </h3>
+
+                <p>
+                    Try another category or search term.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+<div
+    id="cartNotification"
+    class="cart-notification"
+>
+
+    <span class="notification-check">
+        ✓
+    </span>
+
+
+    <span id="notificationMessage">
+        Added to cart!
+    </span>
+
+</div>
+
+
+<site-footer></site-footer>
+
+
+<script type="module" src="./assets/js/main.js"></script>
+<script type = "module" src="assets/js/pages/shop.js"></script>
+
+</body>
+
+</html>

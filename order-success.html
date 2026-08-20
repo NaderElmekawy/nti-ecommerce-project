@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Success | Stride</title>
+    <meta
+      name="description"
+      content="Thank you for your purchase from Stride."
+    />
+
+    <!-- ======================== FONTS & ICONS ======================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+    <!-- ================== TAILWIND (CDN) ===================== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { corePlugins: { preflight: false } };
+    </script>
+
+    <!-- ================== CUSTOM CSS ========================= -->
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/pages/order-success.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.svg"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body class="font-['Inter']">
+    <!-- ===================== Header ===================== -->
+    <site-header> </site-header>
+
+    <!-- ===================== MAIN CONTENT =========================== -->
+    <main class="container ">
+      <div class="success-page-container">
+        <div class="success-card">
+          <!-- Success Icon -->
+          <div class="success-icon-container">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+
+          <h1 class="success-title">Thank You!</h1>
+          <p class="success-subtitle">
+            Your order has been placed successfully.
+          </p>
+
+          <!-- Order Details -->
+          <div class="order-details-box">
+            <div class="mb-3">
+              <div class="order-id-label">Order ID</div>
+              <div class="order-id-value" id="display-order-id">
+                #Loading...
+              </div>
+            </div>
+
+            <div class="order-summary-item">
+              <span class="label">Date</span>
+              <span class="value" id="display-order-date">-</span>
+            </div>
+            <div class="order-summary-item">
+              <span class="label">Payment Method</span>
+              <span class="value" id="display-payment-method">-</span>
+            </div>
+            <div class="order-summary-item">
+              <span class="label">Items</span>
+              <span class="value" id="display-item-count">-</span>
+            </div>
+
+            <!-- Optional Wallet Receipt Preview -->
+            <div
+              id="wallet-receipt-container"
+              style="display: none"
+              class="mt-3 text-center"
+            >
+              <div class="order-id-label mb-2">Wallet Transfer Receipt</div>
+              <img
+                id="display-wallet-receipt"
+                src=""
+                alt="Transfer Receipt"
+                class="receipt-preview"
+              />
+            </div>
+
+            <div class="order-total-row">
+              <span>Total Paid</span>
+              <span id="display-total-amount">$0.00</span>
+            </div>
+          </div>
+          
+          <!-- Action Button -->
+          <a href="index.html" class="btn-continue">
+            <i class="fa-solid fa-arrow-left"></i>
+            continue shopping
+          </a>
+        </div>
+      </div>
+    </main>
+    
+    <!-- ===================== Footer  =========================== -->
+     <site-footer></site-footer>
+    <!-- =================== BOOTSTRAP JS =================== -->
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script type = "module" src="./assets/js/main.js"></script>
+    <script src="./assets/js/pages/order-success.js"></script>
+  </body>
+</html>

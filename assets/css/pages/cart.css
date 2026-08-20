@@ -1,0 +1,399 @@
+/* ============================================================
+   CART.CSS — Custom styles for the Stride Cart Page
+   ============================================================
+   Architecture Decision:
+   All theme colors use CSS custom properties defined in
+   index.css. This allows instant dark/light switching by simply
+   toggling the [data-theme] attribute on <html>. Bootstrap
+   handles grid and spacing, and this file owns every
+   visual-identity style specific to the cart page.
+   ============================================================ */
+
+
+/* ===================== Main =========================== */
+main {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* ===================== BREADCRUMB =========================== */
+
+.breadcrumb-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.breadcrumb-link:hover {
+  color: var(--color-primary-500);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--text-muted);
+}
+
+
+/* ===================== PAGE TITLE =========================== */
+
+.page-title {
+  color: var(--text-main);
+}
+
+
+/* ===================== CART TABLE HEADER ==================== */
+
+.cart-table-header {
+  border-bottom: 2px solid var(--border-color);
+}
+.cart-col-label {
+  color: var(--text-secondary);
+  letter-spacing: 0.06em;
+}
+
+
+/* ===================== CART ITEM CARD ======================= */
+
+.cart-item-card {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.25rem 0.75rem;
+  transition: background-color 0.2s ease;
+}
+.cart-item-card:hover {
+  background-color: var(--bg-hover);
+}
+
+/* Product Image */
+.cart-item-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  flex-shrink: 0;
+}
+
+/* Product Info */
+.cart-item-name {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+.cart-item-meta {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+/* Price */
+.cart-item-price {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.cart-item-original-price {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+
+/* Quantity Controls */
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.qty-btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.qty-btn:hover {
+  background-color: var(--bg-secondary);
+  color: var(--color-primary-500);
+}
+.qty-value {
+  width: 38px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  padding: 0;
+  line-height: 34px;
+}
+
+/* Item Total */
+.cart-item-total {
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Remove Button */
+.btn-remove-item {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  line-height: 0;
+}
+.btn-remove-item:hover {
+  color: var(--color-danger);
+  background-color: rgba(231, 76, 60, 0.08);
+  transform: scale(1.1);
+}
+
+
+/* ===================== BOTTOM ACTIONS ======================= */
+
+.continue-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.continue-link:hover {
+  color: var(--color-primary-500);
+  gap: 0.625rem !important;
+}
+
+.clear-cart-btn {
+  color: var(--color-danger);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.clear-cart-btn:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+
+/* ===================== ORDER SUMMARY CARD =================== */
+
+.order-summary-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.summary-title {
+  color: var(--text-main);
+}
+
+/* Promo Code */
+.promo-label {
+  color: var(--text-main);
+}
+.promo-input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.promo-input::placeholder {
+  color: var(--text-muted);
+}
+.promo-input:focus {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(232, 119, 46, 0.15);
+  outline: none;
+}
+.promo-apply-btn {
+  background-color: var(--text-main);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+}
+.promo-apply-btn:hover {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--text-main);
+}
+.promo-apply-btn:active {
+  transform: translateY(2);
+}
+.promo-hint {
+  color: var(--text-muted);
+}
+
+/* Divider */
+.summary-divider {
+  border-color: var(--border-color);
+  opacity: 0.6;
+}
+
+/* Labels & Values */
+.summary-label {
+  color: var(--text-secondary);
+}
+.summary-value {
+  color: var(--text-main);
+}
+
+/* Total */
+.total-label {
+  color: var(--text-main);
+}
+.total-value {
+  color: var(--text-main);
+}
+
+/* Shipping Free State */
+.shipping-free {
+  color: var(--color-success) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Free Shipping Message */
+.free-shipping-msg {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  line-height: 1.5;
+  font-weight: 500;
+}
+.free-shipping-msg.achieved {
+  color: var(--color-success);
+  background-color: rgba(46, 204, 113, 0.08);
+}
+.free-shipping-msg.remaining {
+  color: var(--color-primary-500);
+  background-color: var(--bg-badge);
+}
+
+/* Checkout Button */
+.checkout-btn {
+  background-color: var(--color-primary-500);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-md);
+  letter-spacing: 0.01em;
+}
+.checkout-btn:hover {
+  background-color: var(--color-primary-600);
+  color: var(--text-inverse);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(232, 119, 46, 0.3);
+}
+.checkout-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Secure Badge */
+.secure-badge {
+  color: var(--text-muted);
+}
+
+
+/* ===================== EMPTY CART STATE ===================== */
+
+.empty-cart-state {
+  padding: 4rem 1rem;
+}
+.empty-cart-icon svg {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+.empty-cart-subtitle {
+  color: var(--text-secondary);
+}
+
+
+/* ===================== ANIMATIONS =========================== */
+
+/* Fade-in for cart items rendered by JS */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.cart-item-card {
+  animation: fadeSlideIn 0.35s ease-out both;
+}
+/* Staggered entrance: each nth-child gets a slight delay */
+.cart-item-card:nth-child(1) { animation-delay: 0s; }
+.cart-item-card:nth-child(2) { animation-delay: 0.07s; }
+.cart-item-card:nth-child(3) { animation-delay: 0.14s; }
+.cart-item-card:nth-child(4) { animation-delay: 0.21s; }
+.cart-item-card:nth-child(5) { animation-delay: 0.28s; }
+
+/* Fade-out for item removal */
+@keyframes fadeSlideOut {
+  to {
+    opacity: 0;
+    transform: translateX(30px);
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+.cart-item-removing {
+  animation: fadeSlideOut 0.3s ease-in forwards;
+}
+
+/* Pulse for total update */
+@keyframes pulsePop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+.price-updated {
+  animation: pulsePop 0.25s ease;
+}
+
+
+/* ===================== RESPONSIVE TWEAKS ==================== */
+@media (max-width : 1024px) {
+  main {
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cart-item-img {
+    width: 72px;
+    height: 72px;
+  }
+  .order-summary-card {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cart-item-img {
+    width: 64px;
+    height: 64px;
+  }
+}

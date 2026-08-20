@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Arrivals - Stride</title>
+    <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/x-icon" />
+    <!-- Bootstrap and Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/pages/shop.css" />
+  </head>
+  <body>
+    <!-- Site Header Component -->
+    <site-header></site-header>
+
+    <main class="container my-5 pt-5">
+      <div class="text-center mb-5 pt-4">
+        <span class="text-success fw-bold text-uppercase small">● Just Dropped</span>
+        <h1 class="fw-bold display-5">New Arrivals</h1>
+        <p class="text-muted">Explore our latest collection and step into your best style.</p>
+      </div>
+
+      <!-- Container for Dynamic Products Render -->
+      <div class="row g-4" id="new-arrivals-container"></div>
+    </main>
+
+    <!-- Cart Notification Pop-up -->
+    <div id="cartNotification" class="cart-notification">
+      <span class="notification-check">✓</span>
+      <span id="notificationMessage">Added to cart!</span>
+    </div>
+
+    <!-- Site Footer Component -->
+    <site-footer></site-footer>
+
+    <!-- JavaScript Files -->
+    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/pages/new-arrivals.js"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+/* ============================================================
+   FEATURED.CSS — Featured Page Styles
+   ============================================================ */
+
+.featured-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.featured-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.featured-header h1 {
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.featured-header p {
+    margin-bottom: 0;
+    color: var(--text-secondary);
+}
+
+/* Featured Card */
+.featured-card {
+    background: var(--bg-card, #ffffff);
+    color: var(--text-main, #333);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm, 0 2px 8px rgba(0,0,0,0.06));
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md, 0 6px 16px rgba(0,0,0,0.12));
+}
+
+.featured-card .card-text {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn-view-all {
+    background: transparent;
+    color: var(--text-main);
+    border: 2px solid var(--text-main);
+    padding: 10px 24px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-view-all:hover {
+    background: var(--text-main);
+    color: var(--bg-main);
+}
+
+.btn-product {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color, #dee2e6);
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-product:hover {
+    background: var(--text-main);
+    color: var(--bg-main);
+    border-color: var(--text-main);
+}
+
+@media (max-width: 576px) {
+    .featured-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn-view-all {
+        width: 100%;
+    }
+}

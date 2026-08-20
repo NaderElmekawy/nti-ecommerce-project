@@ -1,0 +1,451 @@
+ /* About */
+        /* Page 1  */
+        .Page-1{
+            background-color: #101828;
+            color : #ffff ;
+            padding:200px;
+        }
+        .Page-1 h2 span {
+            color : #fb923c ;
+        } 
+        /* Page 2  */
+        .Page-2 {
+            background-color: var(--bg-secondary);
+            padding: 90px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Page-2-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .P2 {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        .P2 h3 {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--color-primary-600);
+            margin-bottom: 5px;
+        }
+        .P2 p {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 14px;
+        }
+        /* Page 3  */
+        .Page-3{
+            background-color: var(--bg-main);
+            display : flex ;
+            align-items: center;
+            padding : 80px ;
+            gap : 90px ;
+            flex-direction: row-reverse;
+        }
+        .img-Page-3 {
+            position: relative; 
+            display: flex;
+            justify-content: center;
+        }
+        .img-Page-3 img {
+            border-radius: 20px;
+            width : 500px;
+            height: 400px;
+            object-fit: cover;
+        } 
+        .Page-3-cards {
+            display: flex;
+            gap: 30px;
+            margin-top: 25px;
+        } 
+        .card-3 {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        } 
+        .Page-3-icon {
+            background-color: var(--bg-icon);
+            color: var(--color-icon);
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .card-3 h4 {
+            color: var(--text-main);
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 0 4px 0;
+        }
+
+        .card-3 p {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.4;
+        }        
+        .experience-box {
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            position: absolute;
+            bottom: -45px; 
+            left: -25px;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .experience-box h3 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .experience-box p {
+            color: var(--text-secondary);
+            font-size: 11px;
+        }
+        .content-Page-3 {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .content-Page-3 h2{
+            color: var(--text-main);
+            font-weight: bold;
+            margin-bottom: 15px;
+
+        }
+        .content-Page-3 h5{
+            color: var(--color-primary-600);
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        } 
+        /* Page 4  */
+        .Page-4 {
+            background-color: var(--bg-secondary);            
+            text-align: center;
+            padding: 80px;
+            font-family: sans-serif;
+        }
+        .Page-4 h5 {
+            color: var(--color-primary-600);
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .Page-4 h2 {
+            color: var(--text-main);
+            font-size: 32px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        .Page-4-cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .Innovation, 
+        .Customer-Love, 
+        .Sustainability {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 35px 30px;
+            width: 320px;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+        }
+        .Page-4-cards .icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--bg-icon);
+            color: var(--color-icon);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .Page-4-cards h3 {
+            color: var(--text-main);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .Page-4-cards p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        /* Page 5  */
+        .page-5 {
+            background-color: var(--bg-main);
+            padding: 120px;
+            gap : 80px;
+            text-align: center;
+        }
+
+        .title-Page-5 {
+            padding : 40px;
+            text-align: center;
+        }
+
+        .title-Page-5 h5 {
+            color: var(--color-primary-600);
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .title-Page-5 h2 {
+            color: var(--text-main);
+            font-size: 32px;
+        }
+
+        .title-Page-5 p {
+            color: var(--text-secondary);            
+            font-size: 15px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .our-team {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .team-card {
+            text-align: center;
+            width: 220px;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 15px;
+        }
+
+        .team-card h3 {
+            font-size: 16px;
+            color: var(--text-main);
+        }
+
+        .team-card h5 {
+            color: var(--color-primary-600);
+            font-size: 13px;
+            margin: 0;
+            font-weight: 600;
+            padding : 10px;
+        }
+        /* Page 6 */
+        .page-6 {
+            background-color: var(--bg-secondary);
+            padding: 40px ;
+        }
+        .p6 {
+            text-align: center;
+            padding : 20px ;
+        }
+        .p6 h5 {
+            color: var(--color-primary-500);
+        }
+        .p6 h2 {
+            color: var(--text-main);
+        }
+        .Page-6-card{
+            display : flex ;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            border-radius: 20px;
+            height: 300px;
+            padding : 20px;
+            width: 300px;
+            
+            flex-direction: column;
+            text-align: left;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .Page-6-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+        .page-6-box{
+            display : flex ;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .stars {
+            color: var(--color-warning);
+        }
+        .client-container {
+            display: flex;
+            align-items: center;            
+        }
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+        }
+        .client-info img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .client-details {
+            display: flex;
+            flex-direction: column;
+            text-align: right; 
+        }
+        .client-details h4 {
+            color: var(--text-main);
+            font-size: 16px;
+        }
+
+        .client-details h5 {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }  
+        /* Page 7  */
+        .Page-7 {
+            color: var(--color-white);
+            background-color: var(--color-primary-600);
+            border: 2px solid var(--color-primary-600);
+            padding : 30px ;
+            display : flex ;
+            border-radius: 20px;
+            height: 300px;
+            padding : 30px;
+            width: 900px;
+            gap: 15px;
+            flex-direction: column;
+            justify-content:space-around; 
+            text-align: center;
+            align-items: center;
+            margin: 100px auto;
+        }
+        .button-container {
+            display: flex;
+            gap: 15px;
+        }
+        .Shop-Now {
+            padding : 15px ;
+            background-color: var(--color-white);
+            border: 2px solid var(--color-primary-600);
+            border-radius: 30px;
+            color :#ea580c ;
+            align-self: flex-end;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .Browse-Categories {
+            padding: 12px;
+            border-radius: 30px;
+            color: var(--color-white);
+            border: 2px solid var(--color-white);
+            cursor: pointer;
+
+        }
+
+/* Media */
+
+
+        @media (max-width: 992px) {
+        /* Page 1 */
+        .Page-1 {
+            padding: 100px;
+            text-align: center;
+        }
+        .Page-1 h2 {
+            font-size: 28px;
+        }
+
+        .Page-3 {
+            flex-direction: column;
+            padding: 50px;
+            gap: 40px;
+            text-align: center;
+        }
+        .content-Page-3 {
+            text-align: center;
+            align-items: center;
+        }
+        .img-Page-3 img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+        }
+
+        .Page-7 {
+            width: 90%;
+            height: auto;
+            padding: 40px;
+            margin: 50px auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        /* Page 4 & Page 5 */
+        .page-5 {
+            padding: 70px ;
+        }
+        .Page-4 {
+            padding: 60px ;
+        }
+        .Page-4-cards, 
+        .our-team, 
+        .page-6-box {
+            gap: 20px;
+        }
+        .Innovation, 
+        .Customer-Love, 
+        .Sustainability,
+        .Page-6-card {
+            width: 100%;
+            max-width: 350px;
+        }
+        .button-container {
+            flex-direction: column;
+            width: 100%;
+        }
+        .Shop-Now, 
+        .Browse-Categories {
+            width: 100%;
+            text-align: center;
+        }
+    }

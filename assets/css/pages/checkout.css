@@ -1,0 +1,334 @@
+/* ============================================================
+   CHECKOUT.CSS — Custom styles for the Stride Checkout Page
+   ============================================================
+   Architecture Decision:
+   All theme colors use CSS custom properties defined in
+   index.css. This ensures consistent dark/light switching
+   by toggling the [data-theme] attribute on <html>. Bootstrap
+   handles grid and spacing; this file owns every visual-identity
+   style specific to the checkout flow.
+   ============================================================ */
+
+
+/* ===================== Main ======================= */
+main {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* ===================== PAGE CONTAINER ======================= */
+
+.checkout-page {
+  padding-bottom: 5rem;
+}
+
+
+/* ===================== CARD STYLING ========================= */
+
+.checkout-card, .summary-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.checkout-section-title {
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+
+/* ===================== FORM CONTROLS ======================== */
+
+.form-label {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+
+/* ===================== ERROR STATES ========================= */
+
+.form-control.is-invalid {
+  border-color: var(--color-danger);
+  background-image: none;
+}
+.invalid-feedback {
+  font-size: 0.75rem;
+  color: var(--color-danger);
+  margin-top: 0.25rem;
+}
+
+
+/* ===================== PAYMENT OPTIONS ====================== */
+
+.payment-option-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.payment-option-card:hover {
+  border-color: var(--color-primary-400);
+  background-color: var(--bg-card);
+}
+
+.payment-option-card.active {
+  border-color: var(--color-primary-500);
+  background-color: rgba(249, 115, 22, 0.05); /* very light primary tint */
+}
+
+/* Radio Button */
+.payment-radio {
+  margin: 0;
+  cursor: pointer;
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--color-primary-500);
+}
+
+/* Label */
+.payment-label {
+  margin: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-main);
+  flex-grow: 1;
+}
+
+/* Icon */
+.payment-icon {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+
+/* ===================== PAYMENT DETAILS ====================== */
+
+.payment-details-container {
+  display: none;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: -0.5rem;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  animation: fadeInDown 0.3s ease forwards;
+}
+
+.payment-details-container.show {
+  display: block;
+}
+
+
+/* ===================== ANIMATIONS =========================== */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===================== ORDER SUMMARY ======================== */
+
+/* Summary Items */
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.summary-item .label {
+  color: var(--text-secondary);
+}
+
+.summary-item .value {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Divider */
+.summary-divider {
+  border-color: var(--border-color);
+  opacity: 0.6;
+  margin: 1rem 0;
+}
+
+/* Total */
+.summary-total {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+/* Checkout Button */
+.checkout-btn {
+  background-color: var(--color-primary-500);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  font-weight: 700;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.checkout-btn:hover {
+  background-color: var(--color-primary-600);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.checkout-btn:active {
+  transform: translateY(0);
+}
+
+
+/* ===================== PRODUCTS LIST IN SUMMARY ============= */
+
+.summary-product-list {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+  padding-right: 0.5rem;
+}
+.summary-product-list::-webkit-scrollbar {
+  width: 4px;
+}
+.summary-product-list::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+/* Mini Product Card */
+.mini-product {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Product Image */
+.mini-product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+/* Product Details */
+.mini-product-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mini-product-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+.mini-product-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Product Price */
+.mini-product-price {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+
+/* ===================== FILE INPUT ============================ */
+
+.custom-file-upload {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  text-align: center;
+  background-color: var(--bg-main);
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+}
+.custom-file-upload:hover {
+  border-color: var(--color-primary-500);
+  background-color: rgba(249, 115, 22, 0.02);
+}
+input[type="file"] {
+  display: none;
+}
+
+
+/* ===================== WALLET INSTRUCTIONS ================== */
+
+.wallet-instructions {
+  background-color: rgba(249, 115, 22, 0.1);
+  border-left: 4px solid var(--color-primary-500);
+  padding: 1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 1rem;
+}
+.wallet-number {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary-600);
+  letter-spacing: 1px;
+}
+
+@media (max-width : 1024px) {
+  main {
+    padding-inline: 1rem;
+  }
+}

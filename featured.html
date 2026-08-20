@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Featured | Stride</title>
+  <meta
+    name="description"
+    content="Explore Stride's featured collection."/>
+
+  <!-- ======================== FONTS ======================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- =================== BOOTSTRAP (LOCAL) ================= -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+  <!-- ================== CUSTOM CSS ========================= -->
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/pages/shop.css" />
+  <link rel="stylesheet" href="assets/css/pages/featured.css" />
+
+</head>
+
+
+<body>
+  <!-- ===================== NAVBAR ===================== -->
+  <site-header></site-header>
+
+  <!-- ===================== MAIN CONTENT =========================== -->
+  <main>
+
+  <section class="featured-section py-5">
+    <div class="container">
+
+      <!-- Featured Header -->
+      <div class="featured-header mb-5">
+        <div>
+          <span class="text-success fw-bold text-uppercase small">● Top Picks</span>
+          <h1>Featured Collection</h1>
+          <p>Our most popular styles handpicked for you</p>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="row g-4" id="featured-container">
+          <!-- Products will be rendered dynamically by featured.js -->
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+  <!-- Cart Notification Pop-up -->
+  <div id="cartNotification" class="cart-notification">
+    <span class="notification-check">✓</span>
+    <span id="notificationMessage">Added to cart!</span>
+  </div>
+
+  <!-- Footer -->
+  <site-footer></site-footer>
+
+  <!-- JS -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
+  <script src="assets/js/pages/featured.js" type="module"></script>
+</body>
+</html>

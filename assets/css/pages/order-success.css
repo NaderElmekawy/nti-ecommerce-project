@@ -1,0 +1,174 @@
+/* ============================================================
+   ORDER-SUCCESS.CSS — Custom styles for the Stride Order
+   Confirmation Page
+   ============================================================
+   Architecture Decision:
+   All theme colors use CSS custom properties defined in
+   index.css. This ensures consistent dark/light switching
+   by toggling the [data-theme] attribute on <html>. Bootstrap
+   handles grid and spacing; this file owns every visual-identity
+   style specific to the success page.
+   ============================================================ */
+
+
+/* ===================== PAGE CONTAINER ======================= */
+
+.success-page-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+
+/* ===================== SUCCESS CARD ========================= */
+
+.success-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  box-shadow: var(--shadow-lg);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* ===================== SUCCESS ICON ========================= */
+
+.success-icon-container {
+  color: var(--color-success);
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  animation: scaleBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+
+/* ===================== ANIMATIONS =========================== */
+
+@keyframes scaleBounce {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* ===================== TITLE & SUBTITLE ===================== */
+
+.success-title {
+  color: var(--text-main);
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.success-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+/* ===================== ORDER DETAILS BOX ==================== */
+
+.order-details-box {
+  background-color: var(--bg-main);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* Order ID */
+.order-id-label {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.order-id-value {
+  color: var(--color-primary-600);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+
+/* ===================== ORDER SUMMARY ITEMS ================== */
+
+.order-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.order-summary-item .label {
+  color: var(--text-secondary);
+}
+
+.order-summary-item .value {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Total Row */
+.order-total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+
+/* ===================== CONTINUE BUTTON ====================== */
+
+.btn-continue {
+  background-color: var(--color-primary-500);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-continue:hover {
+  background-color: var(--color-primary-600);
+  color: var(--text-inverse);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+
+/* ===================== RECEIPT PREVIEW ====================== */
+
+.receipt-preview {
+  margin-top: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  background-color: var(--bg-card);
+}
