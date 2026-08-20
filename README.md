@@ -1,4 +1,4 @@
-# NTI E-Commerce Project 👟
+# NTI E-Commerce Project 
 
 A responsive e-commerce web application developed as part of the **NTI (National Telecommunication Institute) training program**.
 
